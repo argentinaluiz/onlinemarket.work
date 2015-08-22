@@ -17,7 +17,12 @@ use Zend\View\Model\ViewModel;
 class indexController extends  AbstractActionController
 {
     public function indexAction(){
-        return new ViewModel();
+        $messages = array();
+        if($this->flashmessenger()->hasMessages())
+        {
+           $messages = $this->flashmessenger()->getMessages();
+        }
+        return new ViewModel(array('messages'=>$messages));
     }
 
     public function fooAction(){

@@ -25,11 +25,12 @@ class ViewController extends AbstractActionController
     {
         $itemId =$this->params()->fromQuery('itemId');
 
+
         if(!$itemId){
             $this->flashMessenger()->addMessage('Item not found');
             return $this->redirect()->toRoute('market');
         }
-
+        return new ViewModel(array('itemId'=>$itemId));
     }
 
 }
