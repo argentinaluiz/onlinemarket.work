@@ -11,7 +11,7 @@ return array(
     'router' => array(
         'routes' => array(
             'home' => array(
-                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'type' => 'Literal',
                 'options' => array(
                     'route'    => '/',
                     'defaults' => array(
@@ -82,7 +82,7 @@ return array(
         ),
     ),
     'translator' => array(
-        'locale' => 'pt_BR',
+        'locale' => 'en_US',
         'translation_file_patterns' => array(
             array(
                 'type'     => 'gettext',

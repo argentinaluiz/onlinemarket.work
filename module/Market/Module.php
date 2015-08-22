@@ -1,9 +1,9 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: gabriel.almeida
+ * User: GABRIEL
  * Date: 18/08/2015
- * Time: 12:02
+ * Time: 21:27
  */
 
 namespace Market;
@@ -19,10 +19,10 @@ class Module
     public function getAutoloaderConfig()
     {
         return array(
-            'Zend\Loader\ClassMapAutoloader' =>
-            array(
-                __DIR__.'/autoload_classmap.php'
+            'Zend\Loader\ClassMapAutoloader' =>array(
+             __DIR__.'/autoload_classmap.php'
             ),
+
             'Zend\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
                     __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
