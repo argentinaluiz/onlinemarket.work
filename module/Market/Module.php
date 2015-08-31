@@ -8,6 +8,9 @@
 
 namespace Market;
 
+use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
+use Zend\Mvc\ModuleRouteListener;
+use Zend\Mvc\MvcEvent;
 
 class Module
 {
@@ -25,6 +28,7 @@ class Module
 
             'Zend\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
+		    // if we're in a namespace deeper than one level we need to fix the \ in the path
                     __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
                 ),
             ),

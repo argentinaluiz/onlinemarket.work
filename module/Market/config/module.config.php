@@ -8,6 +8,7 @@
  */
 
 return array(
+
     'router' => array(
         'routes' => array(
             'market' => array(
