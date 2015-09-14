@@ -111,6 +111,15 @@ return array(
         'template_path_stack' => array(
             __DIR__ . '/../view',
         ),
+        'srategies' => array(
+            'ViewJosnStrategy','ViewFeedStrategy'
+        ),
+     ),
+
+    'view_helpers'=>array(
+        'invokables' =>array(
+            'leftLinks' => 'Application\Helper\LeftLinks'
+        )
     ),
     // Placeholder for console routes
     'console' => array(
